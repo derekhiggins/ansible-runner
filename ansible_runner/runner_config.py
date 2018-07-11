@@ -112,6 +112,8 @@ class RunnerConfig(object):
         self.job_timeout = self.settings.get('job_timeout', 120)
         self.pexpect_timeout = self.settings.get('pexpect_timeout', 5)
 
+        self.pexpect_use_poll = self.settings.get('pexpect_use_poll', True)
+
         if 'AD_HOC_COMMAND_ID' in self.env:
             self.cwd = self.private_data_dir
         else:
